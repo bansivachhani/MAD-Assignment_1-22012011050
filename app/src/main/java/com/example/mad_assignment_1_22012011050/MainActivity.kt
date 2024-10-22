@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var resultTextView: TextView
     private var operand1: Double? = null
     private var operator: String? = null
-    private val decimalFormat = DecimalFormat("#.########")  // Format to display cleaner results
+    private val decimalFormat = DecimalFormat("#.########")  
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun appendNumber(number: String) {
-        // If the current display shows "Error", reset to "0"
+
         if (resultTextView.text == "Error") {
             resultTextView.text = "0"
         }
@@ -72,14 +72,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         operator = (view as Button).text.toString()
-        resultTextView.text = "0" // Reset display for next number
+        resultTextView.text = "0"
     }
 
     private fun calculate() {
         val operand2 = resultTextView.text.toString().toDoubleOrNull()
 
         if (operand1 == null || operator == null || operand2 == null) {
-            resultTextView.text = "Error" // Error handling if operator or operands are not set
+            resultTextView.text = "Error"
             return
         }
 
@@ -91,12 +91,12 @@ class MainActivity : AppCompatActivity() {
                 resultTextView.text = "Error"
                 return
             }
-            "%" -> operand1?.rem(operand2) // Modulus operation
+            "%" -> operand1?.rem(operand2)
             else -> null
         }
 
         resultTextView.text = if (result != null) {
-            decimalFormat.format(result)  // Format the result to avoid long decimals
+            decimalFormat.format(result)
         } else {
             "Error"
         }
