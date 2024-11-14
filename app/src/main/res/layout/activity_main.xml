@@ -53,13 +53,14 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:text="9" />
-
             <Button
-                android:id="@+id/buttonDivide"
+                android:id="@+id/buttonClear"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:text="/" />
+                android:text="C" />
+
+
         </LinearLayout>
 
 
@@ -91,11 +92,12 @@
                 android:text="6" />
 
             <Button
-                android:id="@+id/buttonMultiply"
+                android:id="@+id/buttonAdd"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:text="*" />
+                android:text="+" />
+
         </LinearLayout>
 
 
@@ -154,20 +156,20 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:text="%" />
-
             <Button
-                android:id="@+id/buttonClear"
+                android:id="@+id/buttonMultiply"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:text="C" />
+                android:text="*" />
+
 
             <Button
-                android:id="@+id/buttonAdd"
+                android:id="@+id/buttonDivide"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:text="+" />
+                android:text="/" />
         </LinearLayout>
 
 
