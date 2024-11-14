@@ -12,7 +12,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var resultTextView: TextView
     private var operand1: Double? = null
     private var operator: String? = null
-    private val decimalFormat = DecimalFormat("#.########")  
+    private var lastResult: Double? = null  // Variable to store the last result
+    private val decimalFormat = DecimalFormat("#.########")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,7 +52,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun appendNumber(number: String) {
-
         if (resultTextView.text == "Error") {
             resultTextView.text = "0"
         }
@@ -95,12 +95,16 @@ class MainActivity : AppCompatActivity() {
             else -> null
         }
 
-        resultTextView.text = if (result != null) {
-            decimalFormat.format(result)
+        if (result != null) {
+            resultTextView.text = decimalFormat.format(result)
+            lastResult = result  // Store the last result
         } else {
-            "Error"
+            resultTextView.text = "Error"
         }
         operand1 = null
         operator = null
     }
-}
+
+
+    }
+
