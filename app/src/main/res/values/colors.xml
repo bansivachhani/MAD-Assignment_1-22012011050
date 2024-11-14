@@ -2,4 +2,7 @@
 <resources>
     <color name="backgroundColor">#212121</color>
     <color name="buttonColor">#424242</color>
+    <color name="primary_button_bg">#4CAF50</color>
+    <color name="operator_button_bg">#FF5722</color>
+    <color name="equal_button_bg">#0D82DE</color>
 </resources>
