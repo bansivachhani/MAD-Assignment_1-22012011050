@@ -4,5 +4,5 @@
 - Multiplication
 - Division
   
-**User-friendly interface
+**User-friendly interface &
 Real-time calculation**
